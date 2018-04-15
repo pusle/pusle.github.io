@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css?family=Oxygen+Mono');
+
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Oxygen Mono', monospace;
+}
+
+body {
+    background: #8FB4DB url("../img/header-background.jpg") 50% 80% fixed;
+    background-size: cover;
+}
+
+.site-header {
+    height: 40vh;
+    width: 100%;
+
+    position: relative;
+
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+
+    color: #fff;
+}
+
+#site-header::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(56,90,125,.8);
+    z-index: 10;
+}
+
+.site-header .site-navigation {
+    height: 330px;
+    position: relative;
+    z-index: 20;
+}
+
+.site-navigation ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.site-navigation ul li a {
+    position: absolute;
+    width: 75px;
+    height: 75px;
+    transform-origin: top left;
+    transform: rotate(45deg);
+    background-color: transparent;
+    color: #333;
+    transition: all .1s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    border: 1px solid #fff;
+}
+
+.site-navigation ul li a:hover {
+    background-color: #fff;
+    color: #333;
+    z-index: 100;
+}
+
+.site-navigation ul li.about a {
+    left: 110px;
+    top: 56px;
+}
+
+.site-navigation ul li.contact a {
+    top: 56px;
+    left: 0px;
+}
+
+.site-navigation ul li.more a {
+    width: 152px;
+    height: 152px;
+    left: 55px;
+    top: 112px;
+}
+
+.site-navigation ul li a span {
+    transform: rotate(-45deg);
+}
+
+.site-header .site-logo {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-transform: uppercase;
+}
+
+.site-header .site-logo img {
+    width: 60px;
+    height: 60px;
+    margin: 0 10px;
+}
+
+.site-name {
+    display: inline-block;
+    text-align: left;
+}
+
+
+.site-content {
+    min-height: calc(100vh - 6rem);
+    position: relative;
+    background-color: #fff;
+    padding: 3rem;
+}
+
